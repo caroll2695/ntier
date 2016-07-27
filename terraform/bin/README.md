@@ -1,4 +1,4 @@
-### Steps for the VPN administrator.
+### Steps for the VPN administrator:
 
 Step 1. Establish certificate authority. It would be a good idea to map your vpn box with a friendly CNAME like vpn.cloudgeni.us and use that reference.
 
