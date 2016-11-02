@@ -20,7 +20,7 @@ Step 4. Start openvpn server in a container on the instance.
 
 Step 1. Install openvpn client
 
-    sudo apt-get install openvpn
+    sudo apt-get install -y openvpn
 
 Step 2. Check available adapters
 
