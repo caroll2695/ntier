@@ -2,5 +2,5 @@ ssh -t -i ~/.ssh/id_rsa "ubuntu@$(terraform output nat.ip)" \
   sudo docker run \
     --volumes-from ovpn-data \
     --rm \
-    gosuri/openvpn \
+    kylemanna/openvpn \
     ovpn_getclient "${1}" > "${1}-automated.ovpn"
