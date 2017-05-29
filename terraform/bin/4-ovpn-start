@@ -4,4 +4,4 @@ ssh -t -i ~/.ssh/id_rsa "ubuntu@$(terraform output nat.ip)" \
     -d \
     -p 1194:1194/udp \
     --cap-add=NET_ADMIN \
-    gosuri/openvpn
+    kylemanna/openvpn

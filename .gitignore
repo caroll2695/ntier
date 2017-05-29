@@ -2,4 +2,3 @@
 *.tfvars
 *.tfstate*
 *.ovpn
-README.md

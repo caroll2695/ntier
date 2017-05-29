@@ -36,10 +36,10 @@ Step 4. Examine ifconfig to see a new tun adapter
 
 Step 5. Ping internal machines
 
-    ping 10.128.0.86
-    ping 10.128.1.149
+    ping $(terraform output app.0.ip)
+    ping $(terraform output app.1.ip)
 
 Step 6. Connect to them
 
-    ssh ubuntu@10.128.1.149
-    ssh ubuntu@10.128.1.212
+    ssh ubuntu@$(terraform output app.0.ip)
+    ssh ubuntu@$(terraform output app.1.ip)

@@ -11,7 +11,7 @@ resource "aws_instance" "nat" {
   }
   connection {
     user = "ubuntu"
-    key_file = "~/.ssh/id_rsa"
+    private_key = "${file("~/.ssh/id_rsa")}"
   }
   provisioner "remote-exec" {
     inline = [
@@ -23,7 +23,7 @@ resource "aws_instance" "nat" {
       "sudo mkdir -p /etc/openvpn",
       "sudo docker run --name ovpn-data -v /etc/openvpn busybox",
       /* Generate OpenVPN server config */
-      "sudo docker run --volumes-from ovpn-data --rm gosuri/openvpn ovpn_genconfig -p ${var.vpc_cidr} -u udp://${aws_instance.nat.public_ip}"
+      "sudo docker run --volumes-from ovpn-data --rm kylemanna/openvpn ovpn_genconfig -p ${var.vpc_cidr} -u udp://${aws_instance.nat.public_ip}"
     ]
   }
 }
