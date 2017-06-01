@@ -6,7 +6,7 @@ resource "aws_instance" "app" {
   subnet_id = "${aws_subnet.private.id}"
   security_groups = ["${aws_security_group.default.id}"]
   key_name = "${aws_key_pair.deployer.key_name}"
-  source_dest_check = false
+  source_dest_check = true
   user_data = "${file("cloud-config/app.yml")}"
   tags = {
     Name = "automated-app-${count.index}"
