@@ -7,11 +7,11 @@ resource "aws_internet_gateway" "default" {
 resource "aws_subnet" "public" {
   vpc_id            = "${aws_vpc.default.id}"
   cidr_block        = "${var.public_subnet_cidr}"
-  availability_zone = "us-west-1a"
+  availability_zone = "${var.az}"
   map_public_ip_on_launch = true
   depends_on = ["aws_internet_gateway.default"]
-  tags { 
-    Name = "public" 
+  tags {
+    Name = "public"
   }
 }
 

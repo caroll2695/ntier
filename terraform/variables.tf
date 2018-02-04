@@ -11,6 +11,11 @@ variable "region"     {
   default     = "us-west-1"
 }
 
+variable "az"     {
+  description = "AWS availability_zone"
+  default     = "us-west-1a"
+}
+
 variable "vpc_cidr" {
   description = "CIDR for VPC"
   default     = "10.128.0.0/16"
