@@ -11,7 +11,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
   depends_on = ["aws_internet_gateway.default"]
   tags {
-    Name = "public"
+    Name = "my public subnet"
   }
 }
 
@@ -21,6 +21,9 @@ resource "aws_route_table" "public" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.default.id}"
+  }
+  tags {
+    Name = "my public RT"
   }
 }
 
