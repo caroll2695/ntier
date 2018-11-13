@@ -31,12 +31,12 @@ variable "private_subnet_cidr" {
   default     = "10.128.1.0/24"
 }
 
-/* Ubuntu 14.04 AMIs by region */
+/* Ubuntu 16.04 AMIs by region */
 variable "amis" {
   description = "Base AMI to launch the instances with"
   default = {
-    us-west-1 = "ami-c2c3e2a2"
-    us-west-2 = "ami-17701677"
-    us-east-1 = "ami-ad4b33bb"
+    us-west-1 = "ami-056411f6be4840844"
+    us-west-2 = "ami-0ea790e761025f9ce"
+    us-east-1 = "ami-05a36d3b9aa4a17ac"
   }
 }
