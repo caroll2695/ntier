@@ -19,7 +19,7 @@ resource "aws_security_group" "default" {
   }
 
   tags {
-    Name = "automated-vpc"
+    Name = "default"
   }
 }
 
@@ -52,7 +52,7 @@ resource "aws_security_group" "nat" {
   }
 
   tags {
-    Name = "nat-automated-vpc"
+    Name = "nat"
   }
 }
 
@@ -77,6 +77,6 @@ resource "aws_security_group" "web" {
   }
 
   tags {
-    Name = "web-automated-vpc"
+    Name = "web"
   }
 }
