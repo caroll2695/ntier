@@ -1,7 +1,7 @@
 /* Setup our aws provider */
 provider "aws" {
 
-  version = "~> 1.43.2"
+  version = "~> v2.1.0"
 
   access_key  = "${var.access_key}"
   secret_key  = "${var.secret_key}"
