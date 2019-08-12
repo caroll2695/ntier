@@ -6,14 +6,14 @@ variable "secret_key" {
   description = "AWS secret access key"
 }
 
-variable "region"     {
+variable "region" {
   description = "AWS region"
   default     = "us-west-1"
 }
 
-variable "az"     {
+variable "az" {
   description = "AWS availability_zone"
-  default     = "us-west-1a"
+  default     = "us-west-1b"
 }
 
 variable "vpc_cidr" {
