@@ -1,6 +1,6 @@
 /* Setup our aws provider */
 provider "aws" {
-  version = "~> v2.7.0"
+  version = "~> v2.33.0"
 
   access_key = var.access_key
   secret_key = var.secret_key
@@ -15,4 +15,3 @@ resource "aws_vpc" "default" {
     Name = "automated"
   }
 }
-
